@@ -1,0 +1,293 @@
+<html>
+    <title>IK HOME</title>
+    <head>
+      <script>
+         function updateClock() {
+           var now = new Date();
+           var options = {hour12: true}
+           var time = now.toLocaleTimeString(undefined, options);
+           document.getElementById('clock').innerHTML = time;
+         }
+         setInterval(updateClock, 1000);
+         function displayDate() {
+            var currentDate = new Date();
+            var dateString = currentDate.toDateString();
+            document.getElementById('currentDate').textContent = dateString;
+         }
+         const quotes = [
+            "q1",
+            "q2",
+            "q3",
+        ];
+        function getRandomQuote() {
+            return quotes[Math.floor(Math.random() * quotes.length)];
+        }
+
+        function displayNewQuote() {
+            const quoteTextElement = document.getElementById("quote-text");
+            quoteTextElement.textContent = getRandomQuote();
+        }
+        window.addEventListener("load", displayNewQuote);
+       </script>
+    </head>
+    <style>
+     .next{
+      position: relative;
+      top: -1720;
+      right: -1200;
+     }
+     .nextl{
+      color: white;
+      position: relative;
+     }
+     #quote-container{
+      position: relative;
+      top: -1570;
+      right: -700;
+     }
+     #quote-text{
+      color: white;
+      font-size: 70px;
+     }
+     #clock{
+      color: rgb(0, 150, 255);
+      font-size: 70px;
+      position: relative;
+      top: -280;
+      right: -630;
+      width: 400px;
+     }
+     body{
+        background-color: rgb(48, 48, 58);
+        overflow-y: hidden;
+        overflow-x: hidden;
+     }  
+     .image-position{
+      width: 600px;
+      border-radius: 50px;
+      position: relative;
+      top: -500px;
+      right: 0px;
+
+     }
+     #currentDate {
+      position: relative;
+      top: -330;
+      left: 630px;
+      color: rgb(0, 150, 255);
+      font-size: 50px;
+     }
+     h1{
+        color: white;
+        margin-left: 20%;
+        margin-top: 3%;
+        font-size: 150px;
+        position: relative;
+        right: -840px;
+        top: -20px;
+     } 
+    .search-input{
+        width: 500px;
+        height: 70px;
+        position: relative;
+        top: -530px;
+        left: 55px;
+        border-radius: 10px;
+        box-shadow: none;
+        font-size: xx-large;
+        padding-left: 20px;
+        text-shadow: none;
+     }
+     .div1{
+      background-color: rgb(69, 69, 77);
+      width: 335px;
+      height: 85px;
+      position: relative;
+      right: -630px;
+      top: -1020px;
+      border-radius: 5px
+     }
+     .a1{
+      padding-left: 20px;
+     }
+     a{
+      color: white;
+      font-size: 70px;
+      font-family: monospace;
+      text-decoration: none;
+      padding-left: 0px;
+      font-weight: 200;
+     }
+     .div2{
+      background-color: rgb(69, 69, 77);
+      width: 340px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top:-1105px;
+      right: -970;
+     }
+     .div3{
+      background-color: rgb(69, 69, 77);
+      width: 335px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1100;
+      right: -630;
+     }
+     .h3{
+      position: relative;
+      top: -430px;
+      right: -800px;
+      font-size: 55px;
+     }
+     .div4{
+      background-color: rgb(69, 69, 77);
+      width: 340px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1185;
+      right: -970;
+     }
+     .div5{
+      background-color: rgb(69, 69, 77);
+      width: 335px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1180;
+      right: -630;
+     }
+     .div6{
+      background-color: rgb(69, 69, 77);
+      width: 170px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1265;
+      right: -970;
+     }
+     .div61{
+      background-color: rgb(69, 69, 77);
+      width: 180px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1350;
+      right: -1130;
+     
+     }
+     .div7{
+      background-color: rgb(69, 69, 77);
+      width: 340px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1345;
+      right: -970;
+     }
+     .div8{
+      background-color: rgb(69, 69, 77);
+      width: 335px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1430;
+      right: -630;
+     }
+     .div9{
+      background-color: rgb(69, 69, 77);
+      width: 335px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1425;
+      right: -630;
+     }
+     .div10{
+      background-color: rgb(69, 69, 77);
+      width: 340px;
+      height: 85px;
+      border-radius: 5px;
+      position: relative;
+      top: -1510;
+      right: -970;
+     }
+    </style>
+    <body  onload="displayDate()">
+     <h1>
+        IK
+     </h1>
+     <div id="clock"></div>
+     <p id="currentDate"></p>
+     <h1 class="h3"></h1>   
+     <img src="Img1.jpeg" class="image-position">
+     <form action="https://www.google.com/search" method="GET" class="search-form">
+        <input type="text" name="q" placeholder="Google Search" autocomplete="off" class="search-input">
+      </form>
+      <div class="div1">
+       <a href="https://www.youtube.com">
+         <p1 style="padding-left: 40px;">Youtube</p1>
+       </a>   
+      </div>
+      <div class="div2">
+         <a href="https://web.whatsapp.com/" class="a1">
+            <p2>Whatsapp</p2>
+         </a>
+      </div>
+      <div class="div3">
+         <a href="https://open.spotify.com/?flow_id=c37a96be-e5e5-4d3f-8520-dfb73aed7719%3A1686324142";>
+            <p3 style="padding: 35px;">Spotify</p3>
+         </a>
+      </div>
+      <div class="div4">
+         <a href="https://chat.openai.com/">
+            <p4 style="padding-left: 40px;">ChatGpt</p4>
+         </a>
+      </div>
+      <div class="div5">
+         <a href="https://achs.nexterp.in/nlp/nlp/v1/student/student-dashboard#/">
+            <p5 style="padding-left: 110px;">NLP</p5>
+         </a>
+      </div>
+      <div class="div6">
+         <a href="https://www.youtube.com/@Master_tamil/playlists">
+            <p6 style="padding-left: 45px;">Ved</p6>
+         </a>
+      </div>
+      <div class="div61">
+         <a href="https://www.vedantu.com/study-material/cbse-study-material-for-class-10">
+            <p61 style="padding-left: 0px;">antu</p61>
+         </a>
+      </div>
+      <div class="div7">
+         <a href="https://www.w3schools.com/">
+            <p7 style="font-size: 60px;padding-left: 30px; padding-top: 50px; position: relative;
+            top: 5;">W3Schools</p7>
+         </a>
+      </div>
+      <div class="div8">
+         <a href="https://brainly.in/">
+            <p8 style="padding-left: 40px;">Brainly</p8>
+         </a>
+      </div>
+      <div class="div9">
+         <a href="https://www.toppr.com/ask/">
+            <p9 style="padding-left: 70px;">Toppr</p>
+         </a>
+      </div>
+      <div class="div10">
+         <a href="https://byjus.com/cbse-study-material/">
+            <p10 style="padding-left: 70px;">Byjus</p>
+         </a>
+      </div>
+      <div id="quote-container">
+         <p id="quote-text">Loading quote...</p>
+     </div>
+     <div class="next">
+      <a href="index2.html" class="nextl">></a>
+     </div>
+   </body>
+</html> 
